@@ -16,8 +16,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Text("Motion sensors:")
+                .fontWeight(.heavy)
             Text("Accelerometer:")
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
             let accelerometer = motionSensorManager.accelerometerCoordinates3D
             let magnetometer = motionSensorManager.magnetometerCoordinates3D
             let gyroscope = motionSensorManager.gyroscopeCoordinates3D
@@ -25,12 +27,12 @@ struct ContentView: View {
                 Text(accelerometer?.toString() ?? "N/A")
             }
             Text("Magnetometer:")
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
             HStack {
                 Text(magnetometer?.toString() ?? "N/A")
             }
             Text("Gyroscope:")
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
             HStack {
                 Text(gyroscope?.toString() ?? "N/A")
             }
